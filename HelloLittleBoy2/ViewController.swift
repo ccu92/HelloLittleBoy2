@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var littleBoyImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func colorChangedButton(_ sender: UIButton) {
+        littleBoyImage.backgroundColor = UIColor(displayP3Red: CGFloat(Double.random(in: 0...1.0)), green: CGFloat(Double.random(in: 0...1.0)), blue: CGFloat(Double.random(in: 0...1.0)), alpha: CGFloat(1))
+    }
+    
 }
 
